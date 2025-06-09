@@ -1,7 +1,4 @@
 import './App.css'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import CursorParallax from './components/CursorParallax'
 
 import ParticleImage from './assets/projects/particle.png';
 import MealmapImage from './assets/projects/mealmap.png';
