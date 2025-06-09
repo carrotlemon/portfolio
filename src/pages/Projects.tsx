@@ -56,8 +56,8 @@ export default function Projects() {
             </div>
             <div className="flex justify-center h-50 my-30">
                 {/* angled image that points towards cursor and has grey transparent shadow behind it and rounded corners*/}
-                <div className="mx-30 px-30 bg-blue-200">
-                    img
+                <div className="mx-30">
+                    <img src={CRaysImage} alt="C Rays" className="w-[20vw]"/>
                 </div>
                 <div className="flex-col justify-center bg-red-200">   
                     <div className="flex justify-end text-4xl">
