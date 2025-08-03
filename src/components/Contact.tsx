@@ -15,9 +15,9 @@ const Contact = () => {
             </p>
         </div>
         
-        <div className="flex">
-            <div className="w-full flex-col">
-                <div className="flex mx-10 items-center gap-4">
+        <div className="flex mx-50">
+            <div className="w-full flex-col ">
+                <div className="flex mx-10 items-center gap-4 my-5">
                     <div className="w-12 h-12 bg-purple-300 rounded-full flex items-center justify-center">
                         <Mail className="text-white" size={20} />
                     </div>
@@ -27,7 +27,7 @@ const Contact = () => {
                     </div>
                 </div>
                 
-                <div className="flex mx-10 items-center gap-4">
+                <div className="flex mx-10 items-center gap-4 my-5">
                     <div className="w-12 h-12 bg-green-300 rounded-full flex items-center justify-center">
                         <Phone className="text-white" size={20} />
                     </div>
@@ -37,13 +37,13 @@ const Contact = () => {
                     </div>
                 </div>
                 
-                <div className="flex mx-10 items-center gap-4">
+                <div className="flex mx-10 items-center gap-4 my-5">
                     <div className="w-12 h-12 bg-purple-300 rounded-full flex items-center justify-center">
                         <MapPin className="text-white" size={20} />
                     </div>
                     <div>
                         <h3 className="font-semibold text-gray-900">Location</h3>
-                        <p className="text-gray-600">Clevenland, OH</p>
+                        <p className="text-gray-600">Cleveland, OH</p>
                     </div>
                 </div>
             </div>
