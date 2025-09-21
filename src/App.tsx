@@ -43,7 +43,7 @@ export default function App() {
             name: "Software Engineer Intern",
             company: "DoryPower",
             link: "https://dorypower.com/",
-            desc: "INSERT DESC HERE Led development of responsive web applications using React and TypeScript. Collaborated with cross-functional teams to deliver high-quality user experiences.",
+            desc: "Led development of responsive web applications using React and TypeScript. Collaborated with cross-functional teams to deliver high-quality user experiences.",
             technologies: [
                 { name: "Python", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
             ],
