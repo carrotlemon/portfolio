@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
 
-import DiscordIcon from '../assets/icons/discord-icon.svg';
+import GithubIcon from '../assets/icons/github-icon.svg';
 import LinkedInIcon from '../assets/icons/linkedin-icon.svg';
 
 const Contact = () => {
@@ -42,10 +42,10 @@ const Contact = () => {
 
             <a className="flex mx-10 items-center gap-4 my-3" href="https://github.com/carrotlemon" target="_blank" rel="noopener noreferrer">
                 <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
-                    <img className="w-8 h-8" src={DiscordIcon} ></img>
+                    <img className="w-8 h-8" src={GithubIcon} ></img>
                 </div>
                 <div>
-                    <h3 className="font-semibold text-gray-900 text-xl">Discord</h3>
+                    <h3 className="font-semibold text-gray-900 text-xl">Github</h3>
                 </div>
             </a>
 
