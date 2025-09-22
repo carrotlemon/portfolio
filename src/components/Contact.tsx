@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 
 import GithubIcon from '../assets/icons/github-icon.svg';
 import LinkedInIcon from '../assets/icons/linkedin-icon.svg';
@@ -17,6 +17,16 @@ const Contact = () => {
                 <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
                     <p className="text-gray-600">trevorkim3141@gmail.com</p>
+                </div>
+            </div>
+            
+            <div className="flex mx-10 items-center gap-4 my-3">
+                <div className="w-12 h-12 bg-green-300 rounded-full flex items-center justify-center">
+                    <Phone className="text-white" size={20} />
+                </div>
+                <div>
+                    <h3 className="font-semibold text-gray-900">Phone</h3>
+                    <p className="text-gray-600">+1 (330) 888-0405</p>
                 </div>
             </div>
             
