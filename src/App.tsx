@@ -9,6 +9,7 @@ import ExperienceCard from './components/ExperienceCard.tsx';
 
 import DoryPowerImage from './assets/experiences/dorypower.png';
 
+import PypilerImage from './assets/projects/pypiler.png'
 import ParticleImage from './assets/projects/particle.png';
 import MealmapImage from './assets/projects/mealmap.png';
 import CRaysImage from './assets/projects/c-rays.png';
@@ -20,6 +21,10 @@ export default function App() {
     const [activeSection, setActiveSection] = useState('hero');
 
     const projects = [
+        {name:"Pypiler", image:PypilerImage, link:"https://github.com/carrotlemon/PyPiler", desc:"Python to C++ Transpiler with enough scope to translate real coding interview questions!", tech:[
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+        ]},
         {name:"Particle", image:ParticleImage, link:"https://particle-life-js.vercel.app/", desc:"Simulation for visualizing attraction and repulsion interactions between several thousand particles", tech:[
             "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
             "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
