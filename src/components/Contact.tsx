@@ -21,16 +21,6 @@ const Contact = () => {
             </div>
             
             <div className="flex mx-10 items-center gap-4 my-3">
-                <div className="w-12 h-12 bg-green-300 rounded-full flex items-center justify-center">
-                    <Phone className="text-white" size={20} />
-                </div>
-                <div>
-                    <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+1 (330) 888-0405</p>
-                </div>
-            </div>
-            
-            <div className="flex mx-10 items-center gap-4 my-3">
                 <div className="w-12 h-12 bg-purple-300 rounded-full flex items-center justify-center">
                     <MapPin className="text-white" size={20} />
                 </div>
