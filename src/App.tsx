@@ -8,6 +8,7 @@ import Contact from './components/Contact.tsx';
 import ProjectCard from './components/ProjectCard.tsx';
 import ExperienceCard from './components/ExperienceCard.tsx';
 
+import CapitalOneImage from './assets/experiences/capitalone.png'
 import DoryPowerImage from './assets/experiences/dorypower.png';
 import PypilerImage from './assets/projects/pypiler.png'
 import ParticleImage from './assets/projects/particle.png';
@@ -82,6 +83,16 @@ export default function App() {
     ];
 
     const experiences = [
+        {
+            name: "Tech Incubator Intern",
+            company: "Capital One",
+            link: "https://www.capitalone.com",
+            desc: "Collaborated with a team to evaluate chatbot model effectiveness using Python, implementing and analyzing metrics to assess performance and drive data-informed model improvements.",
+            technologies: [
+                { name: "Python", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"}
+            ],
+            image: CapitalOneImage
+        },
         {
             name: "Software Engineer Intern",
             company: "DoryPower",
