@@ -108,17 +108,15 @@ export default function App() {
     useEffect(() => {
         const handleScroll = () => {
             const sections = ['hero', 'experience', 'projects', 'contact'];
-            const scrollPosition = window.scrollY + 120;
-
-            sections.forEach(section => {
+            let active = 'hero';
+            for (const section of sections) {
                 const element = document.getElementById(section);
-                if (element) {
-                    const { offsetTop, offsetHeight } = element;
-                    if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-                        setActiveSection(section);
-                    }
+                if (!element) continue;
+                if (element.getBoundingClientRect().top < window.innerHeight * 0.6) {
+                    active = section;
                 }
-            });
+            }
+            setActiveSection(active);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -130,110 +128,88 @@ export default function App() {
     };
 
     return (
-        <div className="min-h-screen relative overflow-x-hidden" style={{ background: '#09090f', color: '#f0eeff' }}>
-            {/* Background ambient orbs */}
-            <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-                <div className="absolute -top-48 -right-48 w-[800px] h-[800px] rounded-full"
-                     style={{ background: 'radial-gradient(circle, rgba(249,115,22,0.055) 0%, transparent 60%)' }} />
-                <div className="absolute -bottom-48 -left-48 w-[800px] h-[800px] rounded-full"
-                     style={{ background: 'radial-gradient(circle, rgba(168,85,247,0.055) 0%, transparent 60%)' }} />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full"
-                     style={{ background: 'radial-gradient(circle, rgba(168,85,247,0.025) 0%, transparent 60%)' }} />
+        <div className="min-h-screen relative overflow-x-hidden" style={{ background: '#000000', color: '#ffffff' }}>
+            <Navbar activeSection={activeSection} scrollToSection={scrollToSection} />
+
+            {/* Hero */}
+            <section id="hero" className="min-h-screen flex items-center pt-16">
+                <Hero scrollToSection={scrollToSection} />
+            </section>
+
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="divider" />
             </div>
 
-            <div className="relative z-10">
-                <Navbar activeSection={activeSection} scrollToSection={scrollToSection} />
-
-                {/* Hero */}
-                <section id="hero" className="min-h-screen flex items-center pt-16">
-                    <Hero scrollToSection={scrollToSection} />
-                </section>
-
+            {/* Experience */}
+            <section id="experience" className="py-24">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="gradient-divider" />
-                </div>
-
-                {/* Experience */}
-                <section id="experience" className="py-24">
-                    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <motion.div
-                            initial="hidden"
-                            whileInView="show"
-                            viewport={{ once: true, amount: 0.2 }}
-                            variants={stagger}
-                        >
-                            <motion.div variants={fadeUp} className="mb-14">
-                                <p className="section-label mb-3">Where I've Worked</p>
-                                <h2 className="text-3xl md:text-4xl font-bold text-white">Experience</h2>
-                            </motion.div>
-
-                            <motion.div variants={stagger} className="flex justify-center gap-8">
-                                {experiences.map((experience, index) => (
-                                    <motion.div key={index} variants={fadeUp}>
-                                        <ExperienceCard {...experience} />
-                                    </motion.div>
-                                ))}
-                            </motion.div>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true, amount: 0.2 }}
+                        variants={stagger}
+                    >
+                        <motion.div variants={fadeUp} className="mb-14">
+                            <h2 className="text-3xl md:text-4xl font-bold text-white">Experience</h2>
                         </motion.div>
-                    </div>
-                </section>
 
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="gradient-divider" />
-                </div>
-
-                {/* Projects */}
-                <section id="projects" className="py-24">
-                    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <motion.div
-                            initial="hidden"
-                            whileInView="show"
-                            viewport={{ once: true, amount: 0.1 }}
-                            variants={stagger}
-                        >
-                            <motion.div variants={fadeUp} className="mb-14">
-                                <p className="section-label mb-3">Things I've Built</p>
-                                <h2 className="text-3xl md:text-4xl font-bold text-white">Projects</h2>
-                            </motion.div>
-
-                            <motion.div
-                                variants={stagger}
-                                className="grid md:grid-cols-2 gap-5"
-                            >
-                                {projects.map((project, index) => (
-                                    <motion.div
-                                        key={index}
-                                        variants={fadeUp}
-                                        className={
-                                            index === projects.length - 1 && projects.length % 2 !== 0
-                                                ? 'md:col-span-2 md:max-w-md md:mx-auto md:w-full'
-                                                : ''
-                                        }
-                                    >
-                                        <ProjectCard {...project} />
-                                    </motion.div>
-                                ))}
-                            </motion.div>
+                        <motion.div variants={stagger} className="flex flex-col gap-5">
+                            {experiences.map((experience, index) => (
+                                <motion.div key={index} variants={fadeUp}>
+                                    <ExperienceCard {...experience} />
+                                </motion.div>
+                            ))}
                         </motion.div>
-                    </div>
-                </section>
+                    </motion.div>
+                </div>
+            </section>
 
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="divider" />
+            </div>
+
+            {/* Projects */}
+            <section id="projects" className="py-24">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="gradient-divider" />
-                </div>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true, amount: 0.1 }}
+                        variants={stagger}
+                    >
+                        <motion.div variants={fadeUp} className="mb-14">
+                            <h2 className="text-3xl md:text-4xl font-bold text-white">Projects</h2>
+                        </motion.div>
 
-                {/* Contact */}
-                <section id="contact" className="py-24">
-                    <Contact />
-                </section>
-
-                {/* Footer */}
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-                    <div className="gradient-divider mb-8" />
-                    <p className="text-center text-xs" style={{ color: '#3a3a60' }}>
-                        Built by Trevor Kim
-                    </p>
+                        <motion.div
+                            variants={stagger}
+                            className="flex flex-col gap-5"
+                        >
+                            {projects.map((project, index) => (
+                                <motion.div key={index} variants={fadeUp}>
+                                    <ProjectCard {...project} />
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                    </motion.div>
                 </div>
+            </section>
+
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="divider" />
+            </div>
+
+            {/* Contact */}
+            <section id="contact" className="py-24">
+                <Contact />
+            </section>
+
+            {/* Footer */}
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+                <div className="divider mb-8" />
+                <p className="text-center text-xs" style={{ color: '#333333' }}>
+                    Built by Trevor Kim
+                </p>
             </div>
         </div>
     );

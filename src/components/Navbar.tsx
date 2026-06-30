@@ -19,10 +19,10 @@ const Navbar = ({ activeSection, scrollToSection }: NavbarProps) => {
         <nav
             className="fixed top-0 left-0 right-0 z-50"
             style={{
-                background: 'rgba(9, 9, 15, 0.82)',
-                backdropFilter: 'blur(20px)',
-                WebkitBackdropFilter: 'blur(20px)',
-                borderBottom: '1px solid rgba(255,255,255,0.05)',
+                background: 'rgba(0,0,0,0.9)',
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
+                borderBottom: '1px solid #1a1a1a',
             }}
         >
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,7 +30,7 @@ const Navbar = ({ activeSection, scrollToSection }: NavbarProps) => {
                     {/* Logo */}
                     <button
                         onClick={() => scrollToSection('hero')}
-                        className="gradient-text text-lg font-bold tracking-tight"
+                        className="text-lg font-bold tracking-tight text-white"
                     >
                         Trevor Kim
                     </button>
@@ -50,8 +50,8 @@ const Navbar = ({ activeSection, scrollToSection }: NavbarProps) => {
 
                     {/* Mobile menu button */}
                     <button
-                        className="md:hidden p-2 rounded-lg text-[#5a5a80] hover:text-white transition-colors"
-                        style={{ border: '1px solid rgba(255,255,255,0.07)' }}
+                        className="md:hidden p-2 text-[#555] hover:text-white transition-colors"
+                        style={{ border: '1px solid #1f1f1f' }}
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         aria-label="Toggle menu"
                     >
@@ -70,7 +70,7 @@ const Navbar = ({ activeSection, scrollToSection }: NavbarProps) => {
 
             {/* Mobile menu */}
             {isMenuOpen && (
-                <div style={{ background: 'rgba(9,9,15,0.96)', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+                <div style={{ background: '#000', borderTop: '1px solid #1a1a1a' }}>
                     <div className="px-4 py-3 space-y-1">
                         {navItems.map((item) => (
                             <button
@@ -79,10 +79,10 @@ const Navbar = ({ activeSection, scrollToSection }: NavbarProps) => {
                                     scrollToSection(item.id);
                                     setIsMenuOpen(false);
                                 }}
-                                className={`block w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                                className={`block w-full text-left px-4 py-2.5 text-sm font-medium transition-colors ${
                                     activeSection === item.id
-                                        ? 'text-[#f97316] bg-[rgba(249,115,22,0.08)]'
-                                        : 'text-[#5a5a80] hover:text-white'
+                                        ? 'text-[#a855f7]'
+                                        : 'text-[#555] hover:text-white'
                                 }`}
                             >
                                 {item.label}
