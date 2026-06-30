@@ -36,18 +36,19 @@ export default function App() {
             link: "https://github.com/carrotlemon/PyPiler",
             desc: "Python to C++ Transpiler with enough scope to translate real coding interview questions!",
             tech: [
-                "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
-                "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+                { name: "C++", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" },
+                { name: "Python", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
             ]
         },
         {
-            name: "Particle",
+            name: "Particle Simulator",
             image: ParticleImage,
             link: "https://particle-life-js.vercel.app/",
             desc: "Simulation for visualizing attraction and repulsion interactions between several thousand particles",
             tech: [
-                "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-                "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+                { name: "JavaScript", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+                { name: "React", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+                { name: "Vercel", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" },
             ]
         },
         {
@@ -56,9 +57,10 @@ export default function App() {
             link: "https://amealmap.vercel.app/",
             desc: "A website for tracking ingredients for meals so you can grocery shop without forgetting about ingredients",
             tech: [
-                "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
-                "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-                "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
+                { name: "TypeScript", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
+                { name: "React", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+                { name: "Firebase", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" },
+                { name: "Vercel", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" },
             ]
         },
         {
@@ -67,7 +69,7 @@ export default function App() {
             link: "https://github.com/carrotlemon/C-rays",
             desc: "Simple 2d ray tracer built in C",
             tech: [
-                "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
+                { name: "C", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" },
             ]
         },
         {
@@ -76,8 +78,8 @@ export default function App() {
             link: "https://github.com/carrotlemon/TimeQuizzer",
             desc: "A clock reading practice desktop application",
             tech: [
-                "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-                "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg",
+                { name: "JavaScript", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+                { name: "Electron", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg" },
             ]
         },
     ];
@@ -89,7 +91,11 @@ export default function App() {
             link: "https://www.capitalone.com",
             desc: "Collaborated with a team to evaluate chatbot model effectiveness using Python, implementing and analyzing metrics to assess performance and drive data-informed model improvements.",
             technologies: [
-                { name: "Python", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"}
+                { name: "Python", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"},
+                { name: "PyTorch", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg"},
+                { name: "AWS", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"},
+                { name: "Kubernetes", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg"},
+                { name: "Docker", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"},
             ],
             image: CapitalOneImage
         },
@@ -97,7 +103,7 @@ export default function App() {
             name: "Software Engineer Intern",
             company: "DoryPower",
             link: "https://dorypower.com/",
-            desc: "Led development of responsive web applications using React and TypeScript. Collaborated with cross-functional teams to deliver high-quality user experiences.",
+            desc: "Spearheaded design and deployment of automated data collection systems using Python web scrapers and crawlers. Engineered data pipelines processing 120,000+ entries, built ML-powered classification using NLP techniques, and implemented adaptive error-handling and anomaly detection modules.",
             technologies: [
                 { name: "Python", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
             ],
@@ -141,7 +147,7 @@ export default function App() {
             </div>
 
             {/* Experience */}
-            <section id="experience" className="py-24">
+            <section id="experience" className="py-14 md:py-24">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial="hidden"
@@ -149,7 +155,7 @@ export default function App() {
                         viewport={{ once: true, amount: 0.2 }}
                         variants={stagger}
                     >
-                        <motion.div variants={fadeUp} className="mb-14">
+                        <motion.div variants={fadeUp} className="mb-8 md:mb-14">
                             <h2 className="text-3xl md:text-4xl font-bold text-white">Experience</h2>
                         </motion.div>
 
@@ -169,7 +175,7 @@ export default function App() {
             </div>
 
             {/* Projects */}
-            <section id="projects" className="py-24">
+            <section id="projects" className="py-14 md:py-24">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial="hidden"
@@ -177,7 +183,7 @@ export default function App() {
                         viewport={{ once: true, amount: 0.1 }}
                         variants={stagger}
                     >
-                        <motion.div variants={fadeUp} className="mb-14">
+                        <motion.div variants={fadeUp} className="mb-8 md:mb-14">
                             <h2 className="text-3xl md:text-4xl font-bold text-white">Projects</h2>
                         </motion.div>
 
@@ -200,7 +206,7 @@ export default function App() {
             </div>
 
             {/* Contact */}
-            <section id="contact" className="py-24">
+            <section id="contact" className="py-14 md:py-24">
                 <Contact />
             </section>
 

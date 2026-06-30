@@ -76,7 +76,7 @@ const Hero = ({ scrollToSection }: { scrollToSection: (sectionId: string) => voi
                     transition={{ delay: 0.2, duration: 0.75, ease }}
                 >
                     <div
-                        className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden"
+                        className="w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden"
                         style={{
                             WebkitMaskImage: 'radial-gradient(circle, black 42%, transparent 72%)',
                             maskImage: 'radial-gradient(circle, black 42%, transparent 72%)',
