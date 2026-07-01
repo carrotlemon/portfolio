@@ -23,7 +23,7 @@ const Contact = () => {
                 variants={stagger}
             >
                 <motion.div variants={fadeUp} className="mb-14 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white">Get In Touch</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-white">Contact</h2>
                 </motion.div>
 
                 <motion.div variants={stagger} className="grid sm:grid-cols-2 gap-4 max-w-lg mx-auto">
