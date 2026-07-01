@@ -63,7 +63,7 @@ const Hero = ({ scrollToSection }: { scrollToSection: (sectionId: string) => voi
                             onClick={() => scrollToSection('contact')}
                             className="btn-outline px-6 py-2.5 text-sm"
                         >
-                            Get In Touch
+                            Contact
                         </button>
                     </motion.div>
                 </motion.div>
