@@ -15,6 +15,7 @@ import ParticleImage from './assets/projects/particle.png';
 import MealmapImage from './assets/projects/mealmap.png';
 import CRaysImage from './assets/projects/c-rays.png';
 import TimeImage from './assets/projects/time-quizzer.png';
+import YTPolyglotImage from './assets/projects/yt-polyglot.png';
 
 const fadeUp = {
     hidden: { opacity: 0, y: 28 },
@@ -38,6 +39,16 @@ export default function App() {
             tech: [
                 { name: "C++", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" },
                 { name: "Python", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+            ]
+        },
+        {
+            name: "YT Polyglot",
+            image: YTPolyglotImage,
+            link: "https://chromewebstore.google.com/detail/yt-polyglot/lfhieckclgkifahfjbkoenliofhohgge",
+            desc: "Chrome extension that displays multiple subtitle languages on YouTube simultaneously — dual subtitles and side-by-side translation for language learning.",
+            tech: [
+                { name: "JavaScript", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+                { name: "Chrome", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/chrome/chrome-original.svg" },
             ]
         },
         {
