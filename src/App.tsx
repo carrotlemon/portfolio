@@ -16,6 +16,7 @@ import MealmapImage from './assets/projects/mealmap.png';
 import CRaysImage from './assets/projects/c-rays.png';
 import TimeImage from './assets/projects/time-quizzer.png';
 import YTPolyglotImage from './assets/projects/yt-polyglot.png';
+import PolyrhythmImage from './assets/projects/polyrhythm.png';
 
 const fadeUp = {
     hidden: { opacity: 0, y: 28 },
@@ -81,6 +82,16 @@ export default function App() {
             desc: "Simple 2d ray tracer built in C",
             tech: [
                 { name: "C", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" },
+            ]
+        },
+        {
+            name: "Polyrhythm Tapper",
+            image: PolyrhythmImage,
+            link: "https://github.com/carrotlemon/polyrhythm-tapper",
+            desc: "Desktop app for learning and hearing polyrhythms — enter two rhythms and a BPM to hear them interlock, with a pattern grid, phase rings, and a pop-out compact window.",
+            tech: [
+                { name: "JavaScript", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+                { name: "Electron", svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg" },
             ]
         },
         {
